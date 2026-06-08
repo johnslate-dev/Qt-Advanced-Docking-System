@@ -11,6 +11,8 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_P
 # we can override this behavior by explicitly setting ADS_VERSION and
 # skipping the git checks. This is useful for cases where this project is being
 # used independently of its original git repo (e.g. vendored in another project)
+set(ADS_VERSION "3.8.1")
+
 if(NOT ADS_VERSION)
     include(GetGitRevisionDescription)
     git_describe(GitTagVersion --tags)
