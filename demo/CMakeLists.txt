@@ -6,6 +6,9 @@ find_package(Qt${QT_VERSION_MAJOR} 5.5 COMPONENTS Core Gui Widgets Quick QuickWi
 if(WIN32 AND QT_VERSION_MAJOR LESS 6)
     find_package(Qt${QT_VERSION_MAJOR} COMPONENTS AxContainer REQUIRED)
 endif()
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(ads_demo_SRCS
     main.cpp

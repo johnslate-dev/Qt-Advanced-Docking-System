@@ -57,18 +57,11 @@ public:
 private slots:
 	void on_actionSaveState_triggered(bool);
 	void on_actionRestoreState_triggered(bool);
-	void savePerspective();
-	void onViewToggled(bool Open);
-	void onViewVisibilityChanged(bool Visible);
-	void createEditor();
-	void createTable();
+    void lockWorkspace(bool Value);
+    void createEditor();
 	void onEditorCloseRequested();
-	void onImageViewerCloseRequested();
-	void showStatusDialog();
-	void toggleDockWidgetWindowTitle();
-	void applyVsStyle();
-	void createImageViewer();
-	void lockWorkspace(bool Value);
+
+
 };
 
 #endif // MAINWINDOW_H
